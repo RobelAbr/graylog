@@ -7,7 +7,7 @@ services:
       - graylog
     volumes:
       - mongo_data:/data/db
-
+      -
   # OpenSearch
   opensearch:
     image: "opensearchproject/opensearch:2.12.0"
