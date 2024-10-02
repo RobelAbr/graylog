@@ -1,0 +1,15 @@
+# Commands from .env
+include .env
+export $(shell sed 's/=.*//' .env)
+
+# Run all services
+up:
+	docker-compose up -d
+
+# Stop all services
+down:
+	docker-compose down
+
+# Rebuild the images and start services
+build:
+	docker-compose up --build -d
